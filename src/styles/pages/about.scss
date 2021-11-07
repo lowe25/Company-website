@@ -1,0 +1,64 @@
+.about-container {
+  .comp-about {
+    padding: 25px;
+    h1 {
+      text-align: center;
+      position: relative;
+      right: 18%;
+    }
+    .betlog {
+      text-align: center;
+      p {
+        display: inline-block;
+        width: 59%;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+      }
+    }
+  }
+}
+
+.comp-teams {
+  min-height: 1200px;
+  text-align: center;
+  h1{
+    text-align: center;
+    position: relative;
+    right: 11%;
+  }
+.main{
+    display: grid;
+    justify-content: center;
+    padding: 20px;
+    .emp-131{
+        height: 200px;
+        width: 250px;
+        border: 1px solid black;
+      }
+}
+  .teams {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 70px;
+    padding: 25px;
+    .emp-1,
+    .emp-2,
+    .emp-3,
+    .emp-4,
+    .emp-5,
+    .emp-6,
+    .emp-7,
+    .emp-8,
+    .emp-9,
+    .emp-10,
+    .emp-11,
+    .emp-12 {
+      height: 200px;
+      width: 250px;
+      border: 1px solid black;
+    }
+  }
+}
