@@ -1,0 +1,110 @@
+.landing-img {
+  height: 450px;
+  background: url("/images/landing-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: $font-color1;
+  .landing-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 30%;
+    h1 {
+      padding: 6px;
+    }
+    .btn-section {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      .btn-packages,
+      .btn-consult {
+        @include btn-main;
+      }
+    }
+  }
+}
+
+.discounts-container {
+  height: 120px;
+  background-color: $bg-color2;
+  color: $font-color1;
+  .inputs {
+    height: 126px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 18px;
+    text-align: center;
+    .txt-email {
+      height: 40px;
+      width: 270px;
+    }
+    .btn-submit {
+      height: 40px;
+      width: 150px;
+    }
+  }
+}
+
+.tbl-container {
+  min-height: 500px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+  }
+}
+
+.client-container {
+  min-height: 400px;
+  text-align: center;
+  background-color: $bg-color3;
+  color: $font-color1;
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content:center;
+    gap: 70px;
+    .client1 {
+      .client-pic1 {
+        height: 160px;
+        width: 160px;
+        background-color: white;
+        border-radius: 200px;
+      } 
+    }
+
+    .client2 {
+      .client-pic2 {
+        height: 160px;
+        width: 160px;
+        background-color: white;
+        border-radius: 200px;
+      }
+    }
+
+    .client3 {
+      .client-pic3 {
+        height: 160px;
+        width: 160px;
+        background-color: white;
+        border-radius: 200px;
+      }
+    }
+  }
+}
