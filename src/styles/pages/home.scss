@@ -22,6 +22,7 @@
       .btn-packages,
       .btn-consult {
         @include btn-main;
+        color: $bg-color1;
       }
     }
   }
@@ -44,8 +45,8 @@
       width: 270px;
     }
     .btn-submit {
-      height: 40px;
-      width: 150px;
+     @include btn-main;
+     height: 40px;
     }
   }
 }
