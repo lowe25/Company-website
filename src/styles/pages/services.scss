@@ -1,67 +1,40 @@
 .services-container{
-    min-height: 600px;
-    padding: 20px;
-    .comp-loc{
-        display: grid;
-        justify-content: center;
-        text-align: center;
-        line-height: 1.6;
-        p{
-            padding: 3px;
-        }
-        .comp-pic{
-            height: 200px;
-            width: 200px;
-            border: 1px solid black;
-            border-radius: 100px;
-        }
-        ul{
-            list-style: none;
-            li{
-            padding: 5px;
-            text-align: left;
-            .fas{
-                padding: 10px;
-            }
-            }
-        }
+    height: 800px;
+    text-align: center;
+    padding-top: 70px;
+    h1{
+        padding: 15px;
     }
-    .form{
-        display: flex;
+    .services{
+        display: grid;
+        grid-template-columns: repeat(3,auto);
         justify-content: center;
-        gap: 30px;
-        .services-form{
-            label{
-                display: block;
-                padding: 10px;
-                text-align: left;
-                position: relative;
-                right: 2%;
+         gap:20px;
+        .services1{
+            border: 2px solid black;
+            height: 250px;
+            width: 450px;
+            p{
+               text-align: center;
+               padding: 25px;
+               font-size: 15px;
             }
-            .txt-name,
-            .txt-email,
-            .txt-contact{
-                @include textbox1;
+            .e{
+                text-align: center;
+                padding: 25px;
+                font-size: 15px;
             }
-            .txt-area{
-                @include text-area;
+            .aa{
+                text-align: center;
+                padding: 20px;
+                font-size: 15px;
             }
-            .btn-submit{
-                @include btn-main;
-               color: $font-color1;
-               background-color: $bg-color1;
-            }
-        }
-        .contact-info{
-            padding: 2px;
-            ul{
-                list-style: none;
-                li{
-                padding: 5px;
-                .fas{
-                    padding: 10px;
-                }
-                }
+            .btn-con{
+              .btn-inq{
+                  @include btn-main;
+                  color: $font-color1;
+                  background-color: $bg-color1;
+              }
             }
         }
     }

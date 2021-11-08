@@ -30,6 +30,7 @@ function Landing() {
 
       <div className="tbl-container">
         <table>
+        <tbody>
           <tr>
             <th></th>
             <th>Starter</th>
@@ -39,99 +40,100 @@ function Landing() {
           <tr>
             <td> 24/7 Support</td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
           </tr>
           <tr>
             <td>SEO Friendly</td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
           </tr>
           <tr>
             <td>Responsive Pages</td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
           </tr>
           <tr>
             <td>Free Logo Design</td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
           </tr>
           <tr>
             <td>Free Business Card</td>
             <td>
-              <i class="fas fa-times"></i>
+              <i className="fas fa-times"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
           </tr>
           <tr>
             <td>Customized Web Design creation</td>
             <td>
-              <i class="fas fa-times"></i>
+              <i className="fas fa-times"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
           </tr>
           <tr>
             <td>Web publishing and Hosting (100MB)</td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
           </tr>
           <tr>
             <td>Free 1 Year Website Hosting</td>
             <td>
-              <i class="fas fa-times"></i>
+              <i className="fas fa-times"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
             <td>
-              <i class="fas fa-check"></i>
+              <i className="fas fa-check"></i>
             </td>
           </tr>
+          </tbody>
         </table>
       </div>
     </div>
