@@ -62,11 +62,11 @@ function About() {
           </div>
           <div className="emp-8">
             <div className="emp-pic"></div>
-            <p>Junior Front End Developer</p>
+            <p>Junior Back End Developer</p>
           </div>
           <div className="emp-9">
             <div className="emp-pic"></div>
-            <p>Junior Front End Developer</p>
+            <p>Junior Back End Developer</p>
           </div>
 
           <div className="emp-10">
