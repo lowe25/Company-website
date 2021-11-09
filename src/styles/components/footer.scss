@@ -3,20 +3,20 @@
   color: $font-color1;
   display: flex;
   justify-content: space-between;
-  min-height:240px;
+  min-height: 250px;
   padding: 35px;
   .comp-footer {
-      h2{
-          padding-bottom: 8px;
-      }
+    h2 {
+      padding-bottom: 8px;
+    }
     .comp-about {
       width: 372px;
     }
   }
-.footer-ul{
+  .footer-ul {
     position: relative;
     right: 8%;
-}
+  }
   .footer-ul,
   .footer-socials {
     ul {
@@ -53,6 +53,44 @@
       .btn-sign {
         height: 32px;
         width: 100px;
+      }
+    }
+  }
+}
+
+@include mobile-device1(mobile-md) {
+  .footer {
+    flex-direction: column;
+    font-size: 13px;
+    .comp-footer {
+      h2 {
+        text-align: center;
+      }
+      .comp-about {
+        display: none;
+      }
+    }
+    .footer-ul {
+      display: none;
+    }
+    .footer-socials {
+      text-align: center;
+      padding: 15px;
+      left: 1%;
+    }
+    .comp {
+      text-align: left;
+      justify-content: center;
+      .form {
+        flex-direction: column;
+        .txt-email1 {
+          height: 32px;
+          width: 260px;
+        }
+        .btn-sign {
+          height: 32px;
+          width: 260px;
+        }
       }
     }
   }

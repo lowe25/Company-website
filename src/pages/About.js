@@ -4,7 +4,7 @@ function About() {
       <div className="about-container">
         <div className="comp-about">
           <h1>About Parallax Web Services</h1>
-          <div className="betlog">
+          <div className="comp-desc">
             <p>
               Started as a small company, Parallax Web Services have since grown
               into a large business, and making a name for itself in the Web

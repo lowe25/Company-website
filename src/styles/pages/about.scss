@@ -6,7 +6,7 @@
       position: relative;
       right: 18%;
     }
-    .betlog {
+    .comp-desc {
       text-align: center;
       p {
         display: inline-block;
@@ -79,4 +79,31 @@
       }
     }
   }
+}
+
+@include mobile-device1(mobile-md){
+.about-container{
+.comp-about{
+  h1{
+    text-align: center;
+    right: 0%;
+    font-size: 16px;
+  }
+  .comp-desc{
+    p{
+      width: 250px;
+      font-size: 15px;
+    }
+  }
+}
+}
+.comp-teams{
+  h1{
+    right: 0%;
+    font-size: 16px;
+  }
+.teams{
+  grid-template-columns: repeat(1, auto);
+}
+}
 }

@@ -28,7 +28,7 @@ function Landing() {
         </div>
       </div>
 
-      <div className="tbl-container">
+      <div className="tbl-container" >
         <table>
         <tbody>
           <tr>

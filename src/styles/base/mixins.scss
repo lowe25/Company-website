@@ -1,0 +1,11 @@
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin grid-col {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+}
