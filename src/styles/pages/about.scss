@@ -3,8 +3,6 @@
     padding: 25px;
     h1 {
       text-align: center;
-      position: relative;
-      right: 18%;
     }
     .comp-desc {
       text-align: center;
@@ -26,8 +24,6 @@
   text-align: center;
   h1{
     text-align: center;
-    position: relative;
-    right: 11%;
   }
 .main{
     display: grid;
@@ -48,9 +44,7 @@
       }
 }
   .teams {
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-    justify-content: center;
+ @include grid-col;
     gap: 70px;
     padding: 25px;
     .emp-1,
@@ -81,29 +75,86 @@
   }
 }
 
-@include mobile-device1(mobile-md){
-.about-container{
-.comp-about{
-  h1{
-    text-align: center;
-    right: 0%;
-    font-size: 16px;
+/*Mobile Device Small*/
+@include mobile-device1(mobile-xx){
+  .about-container{
+    font-size: 15px;
+    .comp-about {
+      padding: 25px;
+      h1 {
+        text-align: center;
+        position: relative;
+        right: 0%;
+      }
+      .comp-desc {
+        text-align: center;
+        p {
+          display: inline-block;
+          width: 90%;
+          text-align: left;
+          margin-left: auto;
+          margin-right: auto;
+          line-height: 1.6;
+        }
+      }
+    }
   }
-  .comp-desc{
-    p{
-      width: 250px;
-      font-size: 15px;
+  .comp-teams{
+    text-align: center;
+    h1{
+      text-align: center;
+      position: relative;
+      right: 0%;
+    }
+    .teams{
+     @include grid-col;
+     grid-template-columns: repeat(1,auto);
     }
   }
 }
-}
-.comp-teams{
-  h1{
-    right: 0%;
-    font-size: 16px;
+
+@include mobile-device-sm(tablet-sm1, tablet-sm){
+  .about-container{
+    font-size: 15px;
+    .comp-about {
+      padding: 25px;
+      h1 {
+        text-align: center;
+        position: relative;
+        right: 0%;
+      }
+      .comp-desc {
+        text-align: center;
+        p {
+          display: inline-block;
+          width: 90%;
+          text-align: left;
+          margin-left: auto;
+          margin-right: auto;
+          line-height: 1.6;
+        }
+      }
+    }
   }
-.teams{
-  grid-template-columns: repeat(1, auto);
+  .comp-teams{
+    font-size: 15px;
+    h1{
+      text-align: center;
+      position: relative;
+      right: 0%;
+    }
+    .teams{
+     @include grid-col;
+     grid-template-columns: repeat(2,auto);
+    }
+  }
 }
-}
+
+@include tablet-device-sm(tablet-sm, tablet-md){
+  .comp-teams{
+    .teams{
+     @include grid-col;
+     grid-template-columns: repeat(2,auto);
+    }
+  }
 }

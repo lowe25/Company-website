@@ -56,3 +56,36 @@
     }
 }
 }
+
+@include mobile-device-md(mobile-lg, tablet-sm){
+  .services-container{
+    padding: 14px;
+    .services{
+      @include grid-col;
+      grid-template-columns: repeat(1,auto);
+    }
+  }
+}
+
+@include tablet-device-lg(tablet-sm, tablet-md){
+  .services-container{
+    padding: 14px;
+    .services{
+      @include grid-col;
+      grid-template-columns: repeat(1,auto);
+    }
+  }
+}
+
+@include screen-device-lg(tablet-lg, screen-xl){
+  .services-container{
+    padding: 14px;
+    .services{
+      @include grid-col;
+      grid-template-columns: repeat(2,auto);
+    }
+  }
+}
+
+
+
