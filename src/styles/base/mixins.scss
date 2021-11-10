@@ -3,9 +3,17 @@
     flex-direction: column;
     justify-content: center;
 }
-
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
 @mixin grid-col {
     display: grid;
     grid-template-columns: repeat(3, auto);
+    justify-content: center;
+}
+
+@mixin grid-center {
+    display: grid;
     justify-content: center;
 }

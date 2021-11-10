@@ -27,22 +27,23 @@
 }
 
 .discounts-container {
-  min-height: 135px;
+  height: 135px;
   background-color: $bg-color2;
   color: $font-color1;
   .inputs {
+    padding: 25px;
     position: relative;
-    top: 35%;
+    top: 18%;
     @include grid-col;
     gap: 20px;
     font-size: 18px;
     text-align: center;
-    p{
+    p {
       position: relative;
       top: 22%;
     }
     .txt-email {
-      height: 40px;
+      @include textbox1;
       width: 270px;
     }
     .btn-submit {
@@ -71,7 +72,6 @@
     width: 210px;
   }
 }
-
 .client-container {
   min-height: 400px;
   text-align: center;
@@ -109,6 +109,7 @@
   }
 }
 
+/*Mobile Small*/
 @include mobile-device1(mobile-md) {
   .landing-img {
     font-size: 14px;
@@ -120,10 +121,11 @@
     }
   }
   .discounts-container {
+    height: 205px;
     .inputs {
-      grid-template-columns: repeat(1,auto);
+      top: 0%;
+      grid-template-columns: repeat(1, auto);
       font-size: 15px;
-      padding: 15px;
       .txt-email {
         height: 40px;
         width: 270px;
@@ -140,3 +142,42 @@
     }
   }
 }
+/*Mobile Medium*/
+@include mobile-device-sm(mobile-lg, tablet-sm) {
+  .discounts-container {
+    height: 205px;
+    .inputs {
+      top: 0%;
+      grid-template-columns: repeat(1, auto);
+      font-size: 15px;
+      .txt-email {
+        height: 40px;
+        width: 350px;
+      }
+      .btn-submit {
+        @include btn-main;
+        width: 350px;
+      }
+    }
+  }
+}
+/*Tablet Small*/
+@include tablet-device-sm(tablet-sm, tablet-md){
+  .discounts-container {
+    height: 205px;
+    .inputs {
+      top: 0%;
+      grid-template-columns: repeat(1, auto);
+      font-size: 15px;
+      .txt-email {
+        height: 40px;
+        width: 350px;
+      }
+      .btn-submit {
+        @include btn-main;
+        width: 350px;
+      }
+    }
+  }
+}
+

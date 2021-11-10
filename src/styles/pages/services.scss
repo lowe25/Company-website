@@ -1,41 +1,58 @@
-.services-container{
-    height: 800px;
-    text-align: center;
-    padding-top: 70px;
-    h1{
-        padding: 15px;
+.services-container {
+  min-height: 800px;
+  text-align: center;
+  padding-top: 70px;
+  h1 {
+    padding: 15px;
+  }
+  .services {
+    @include grid-col;
+    gap: 20px;
+    .services1 {
+      border: 2px solid black;
+      height: 250px;
+      width: 450px;
+      p {
+        text-align: center;
+        padding: 25px;
+        font-size: 15px;
+      }
+      .e {
+        text-align: center;
+        padding: 25px;
+        font-size: 15px;
+      }
+      .aa {
+        text-align: center;
+        padding: 20px;
+        font-size: 15px;
+      }
+      .btn-con {
+        .btn-inq {
+          @include btn-main;
+          color: $font-color1;
+          background-color: $bg-color1;
+        }
+      }
     }
+  }
+}
+
+@include mobile-device1(mobile-md){
+.services-container{
+    padding-top: 0;
+    padding-bottom: 20px;
     .services{
-        display: grid;
-        grid-template-columns: repeat(3,auto);
-        justify-content: center;
-         gap:20px;
+        font-size: 15px;
+        @include grid-col;
+        grid-template-columns: repeat(1,auto);
         .services1{
-            border: 2px solid black;
-            height: 250px;
-            width: 450px;
-            p{
-               text-align: center;
-               padding: 25px;
-               font-size: 15px;
-            }
-            .e{
-                text-align: center;
-                padding: 25px;
-                font-size: 15px;
-            }
-            .aa{
-                text-align: center;
-                padding: 20px;
-                font-size: 15px;
-            }
-            .btn-con{
-              .btn-inq{
-                  @include btn-main;
-                  color: $font-color1;
-                  background-color: $bg-color1;
-              }
+            height: 360px;
+            width: 250px;
+            h2{
+                padding-top: 10px;
             }
         }
     }
+}
 }

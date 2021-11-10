@@ -1,72 +1,93 @@
-.contacts-container{
-    min-height: 600px;
-    padding: 20px;
-    .comp-loc{
-        display: grid;
-        justify-content: center;
-        text-align: center;
-        line-height: 1.6;
-        p{
-            padding: 3px;
-        }
-        .comp-pic{
-            height: 200px;
-            width: 200px;
-            border: 1px solid black;
-            border-radius: 100px;
-            background: url("/images/compOffice.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-        ul{
-            list-style: none;
-            li{
-            padding: 5px;
-            text-align: left;
-            .fas{
-                padding: 10px;
-            }
-            }
-        }
+.contacts-container {
+  min-height: 600px;
+  padding: 20px;
+  .comp-loc {
+    @include grid-center;
+    text-align: center;
+    line-height: 1.6;
+    p {
+      padding: 3px;
     }
+    .comp-pic {
+      height: 200px;
+      width: 200px;
+      border: 1px solid black;
+      border-radius: 100px;
+      background: url("/images/compOffice.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    ul {
+      list-style: none;
+      li {
+        padding: 5px;
+        text-align: left;
+        .fas {
+          padding: 10px;
+        }
+      }
+    }
+  }
+  .form {
+    @include flex-center;
+    gap: 30px;
+    .contact-form {
+      label {
+        display: block;
+        padding: 10px;
+        text-align: left;
+        position: relative;
+        right: 2%;
+      }
+      .txt-name,
+      .txt-email,
+      .txt-contact {
+        @include textbox1;
+      }
+      .txt-area {
+        @include text-area;
+      }
+      .btn-submit {
+        @include btn-main;
+        color: $font-color1;
+        background-color: $bg-color1;
+      }
+    }
+    .contact-info {
+      padding: 2px;
+      ul {
+        list-style: none;
+        li {
+          padding: 5px;
+          .fas {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mobile-device1(mobile-md){
+.contacts-container{
     .form{
-        display: flex;
-        justify-content: center;
-        gap: 30px;
+        flex-direction: column;
         .contact-form{
-            label{
-                display: block;
-                padding: 10px;
-                text-align: left;
-                position: relative;
-                right: 2%;
-            }
+            display: grid;
+            justify-content: center;
             .txt-name,
             .txt-email,
-            .txt-contact{
-                @include textbox1;
+            .txt-contact {
+                width: 202px;
             }
-            .txt-area{
-                @include text-area;
+            .txt-area {
+                width: 202px;
             }
-            .btn-submit{
-                @include btn-main;
-               color: $font-color1;
-               background-color: $bg-color1;
-            }
-        }
-        .contact-info{
-            padding: 2px;
-            ul{
-                list-style: none;
-                li{
-                padding: 5px;
-                .fas{
-                    padding: 10px;
-                }
-                }
+            .btn-submit {
+                width: 202px;
             }
         }
     }
+}
 }

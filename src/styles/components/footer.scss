@@ -95,3 +95,123 @@
     }
   }
 }
+
+@include mobile-device-sm(mobile-lg, tablet-sm){
+  .footer {
+    flex-direction: column;
+    font-size: 13px;
+    .comp-footer {
+      h2 {
+        text-align: center;
+      }
+      .comp-about {
+        display: none;
+      }
+    }
+    .footer-ul {
+      display: none;
+    }
+    .footer-socials {
+      text-align: center;
+      padding: 15px;
+      left: 1%;
+    }
+    .comp {
+      text-align: center;
+      justify-content: center;
+      .form {
+        display: grid;
+        justify-content: center;
+        flex-direction: column;
+        .txt-email1 {
+          height: 32px;
+          width: 260px;
+        }
+        .btn-sign {
+          height: 32px;
+          width: 260px;
+        }
+      }
+    }
+  }
+}
+
+@include tablet-device-sm(tablet-sm,tablet-md){
+  .footer {
+    flex-direction: column;
+    font-size: 13px;
+    .comp-footer {
+      h2 {
+        text-align: center;
+      }
+      .comp-about {
+        display: none;
+      }
+    }
+    .footer-ul {
+      display: none;
+    }
+    .footer-socials {
+      text-align: center;
+      padding: 15px;
+      left: 1%;
+    }
+    .comp {
+      text-align: center;
+      justify-content: center;
+      .form {
+        display: grid;
+        justify-content: center;
+        flex-direction: column;
+        .txt-email1 {
+          height: 32px;
+          width: 260px;
+        }
+        .btn-sign {
+          height: 32px;
+          width: 260px;
+        }
+      }
+    }
+  }
+}
+
+@include screen-device-lg(tablet-lg, screen-xl){
+  .footer {
+    flex-direction: column;
+    font-size: 13px;
+    .comp-footer {
+      h2 {
+        text-align: center;
+      }
+      .comp-about {
+        display: none;
+      }
+    }
+    .footer-ul {
+      display: none;
+    }
+    .footer-socials {
+      text-align: center;
+      padding: 15px;
+      left: 1%;
+    }
+    .comp {
+      text-align: center;
+      justify-content: center;
+      .form {
+        display: grid;
+        justify-content: center;
+        flex-direction: column;
+        .txt-email1 {
+          height: 32px;
+          width: 260px;
+        }
+        .btn-sign {
+          height: 32px;
+          width: 260px;
+        }
+      }
+    }
+  }
+}

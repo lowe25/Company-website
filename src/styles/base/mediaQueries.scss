@@ -16,9 +16,37 @@ $screen-sizes: (
     }
 }
 
-@mixin mobile-device-sm($screen) {
-    @media(min-width: map-get($screen-sizes, $screen)) 
-    and (max-width: map-get($screen-sizes, $screen)){
+@mixin mobile-device-sm($screen1, $screen2) {
+    @media(min-width: map-get($screen-sizes, $screen1)) 
+    and (max-width: map-get($screen-sizes, $screen2)){
+        @content;
+    }
+}
+
+@mixin mobile-device-md($screen1, $screen2) {
+    @media(min-width: map-get($screen-sizes, $screen1)) 
+    and (max-width: map-get($screen-sizes, $screen2)){
+        @content;
+    }
+}
+
+@mixin tablet-device-sm($screen1, $screen2) {
+    @media(min-width: map-get($screen-sizes, $screen1)) 
+    and (max-width: map-get($screen-sizes, $screen2)){
+        @content;
+    }
+}
+
+@mixin tablet-device-lg($screen1, $screen2) {
+    @media(min-width: map-get($screen-sizes, $screen1)) 
+    and (max-width: map-get($screen-sizes, $screen2)){
+        @content;
+    }
+}
+
+@mixin screen-device-lg($screen1, $screen2) {
+    @media(min-width: map-get($screen-sizes, $screen1)) 
+    and (max-width: map-get($screen-sizes, $screen2)){
         @content;
     }
 }
