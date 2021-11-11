@@ -43,7 +43,7 @@
       .txt-name,
       .txt-email,
       .txt-contact {
-        @include textbox1;
+      @include textbox1;
       }
       .txt-area {
         @include text-area;
@@ -69,25 +69,67 @@
   }
 }
 
-@include mobile-device1(mobile-md){
+@include mobile-device1(mobile-md) {
 .contacts-container{
-    .form{
-        flex-direction: column;
-        .contact-form{
-            display: grid;
-            justify-content: center;
-            .txt-name,
-            .txt-email,
-            .txt-contact {
-                width: 202px;
-            }
-            .txt-area {
-                width: 202px;
-            }
-            .btn-submit {
-                width: 202px;
-            }
-        }
+  .form {
+    @include flex-center;
+    flex-direction: column;
+    gap: 30px;
+    .contact-form {
+      .txt-name,
+      .txt-email,
+      .txt-contact {
+        width: 100%;
+      }
+      .txt-area {
+        width: 100%;
+      }
+      .btn-submit {
+        @include btn-main;
+        width: 100%;
+        color: $font-color1;
+        background-color: $bg-color1;
+      }
     }
+    .contact-info{
+      @include grid-center;
+      ul{
+        li{
+          text-align: left;
+        }
+      }
+    }
+  }
 }
+}
+
+@include mobile-device-md(mobile-lg, tablet-sm){
+  .contacts-container {
+    .form {
+      flex-direction: column;
+      .contact-form {
+        display: grid;
+        justify-content: center;
+        .txt-name,
+        .txt-email,
+        .txt-contact,
+        .txt-area,
+        .btn-submit  {
+          width: 400px;
+        }
+      }
+      .contact-info{
+        display: grid;
+        justify-content: center;
+        p{
+          text-align: center;
+        }
+        ul{
+          li{
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
 }

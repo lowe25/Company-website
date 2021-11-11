@@ -79,10 +79,11 @@
       left: 1%;
     }
     .comp {
-      text-align: left;
+      text-align: center;
       justify-content: center;
       .form {
-        flex-direction: column;
+        display: grid;
+        justify-content: center;
         .txt-email1 {
           height: 32px;
           width: 260px;
