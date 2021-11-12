@@ -1,4 +1,5 @@
 .about-container {
+  font-family: $font-quick;
   .comp-about {
     padding: 25px;
     h1 {
@@ -19,6 +20,7 @@
 }
 
 .comp-teams {
+  font-family: $font-quick;
   min-height: 1200px;
   color: black;
   text-align: center;

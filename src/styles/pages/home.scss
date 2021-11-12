@@ -5,6 +5,7 @@
   background-size: cover;
   background-position: center;
   color: $font-color1;
+  font-family: $font-inter;
   .landing-txt {
     @include flex-col;
     text-align: center;
@@ -20,16 +21,17 @@
       .btn-packages,
       .btn-consult {
         @include btn-main;
-        color: $bg-color1;
+        color: $font-color1;
+        background-color: $bg-color4;
       }
     }
   }
 }
-
 .discounts-container {
   height: 135px;
   background-color: $bg-color2;
   color: $font-color1;
+  font-family: $font-inter;
   .inputs {
     padding: 25px;
     position: relative;
@@ -52,24 +54,44 @@
     }
   }
 }
-
 .tbl-container {
-  min-height: 500px;
-  padding: 20px;
-  @include flex-col;
-  table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
-  }
 
-  td,
-  th {
-    border: 1px solid #dddddd;
-    text-align: left;
-    padding: 8px;
+  h1 {
     text-align: center;
-    width: 210px;
+    padding: 20px;
+  }
+  min-height: 480px;
+  padding: 20px;
+  table {
+    border: 1px solid $font-color1;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid black;
+  }
+  
+  table th,
+  table td {
+    padding:10px;
+    text-align: center;
+    color: $bg-color1;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
   }
 }
 .client-container {
@@ -138,9 +160,52 @@
   }
   .tbl-container {
     table {
-      display: none;
+      border: 0;
     }
-  }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+}
 }
 /*Mobile Medium*/
 @include mobile-device-sm(mobile-lg, tablet-sm) {
@@ -162,7 +227,7 @@
   }
 }
 /*Tablet Small*/
-@include tablet-device-sm(tablet-sm, tablet-md){
+@include tablet-device-sm(tablet-sm, tablet-md) {
   .discounts-container {
     height: 205px;
     .inputs {
@@ -180,4 +245,3 @@
     }
   }
 }
-

@@ -9,6 +9,8 @@
   }
   .logo {
     font-size: 20px;
+    font-family: $font-quick;
+
   }
   
   .nav-links {
@@ -26,7 +28,13 @@
     font-size: 16px;
     margin: 0 10px;
     cursor: pointer;
+    font-family: $font-quick;
   }
+  .nav-links1.active{
+    font-weight: bold;
+    color: #c12424;
+  }
+
   .burger-menu {
     display: none;
   }

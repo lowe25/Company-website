@@ -13,7 +13,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Switch>
-          <Route path="/" component={Home} exact />
+          <Route path="/home" component={Home} exact />
           <Route path="/about" component={About} />
           <Route path="/contacts" component={Contacts} />
           <Route path="/services" component={Services} />

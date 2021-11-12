@@ -1,6 +1,8 @@
 .contacts-container {
   min-height: 600px;
   padding: 20px;
+  font-family: $font-quick;
+
   .comp-loc {
     @include grid-center;
     text-align: center;

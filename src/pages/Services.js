@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Services() {
   return (
     <div>
@@ -11,7 +13,11 @@ function Services() {
               traffic to a website or a web page from search engines
             </p>
             <div className="btn-con">
-            <input type="button" value="Inquire" className="btn-inq"></input>
+              <Link to="/contacts">
+                <button type="submit" className="btn-inq">
+                  Inquire
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -24,7 +30,11 @@ function Services() {
               functions.
             </p>
             <div className="btn-con">
-              <input type="button" value="Inquire" className="btn-inq"></input>
+              <Link to="/contacts">
+                <button type="submit" className="btn-inq">
+                  Inquire
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -35,7 +45,11 @@ function Services() {
               among the majority of business owners,retailers and entrepreneurs.
             </p>
             <div className="btn-con">
-            <input type="button" value="Inquire" className="btn-inq"></input>
+              <Link to="/contacts">
+                <button type="submit" className="btn-inq">
+                  Inquire
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -48,7 +62,11 @@ function Services() {
               works and what doesn't.
             </p>
             <div className="btn-con">
-            <input type="button" value="Inquire" className="btn-inq"></input>
+              <Link to="/contacts">
+                <button type="submit" className="btn-inq">
+                  Inquire
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -61,7 +79,11 @@ function Services() {
               new ones
             </p>
             <div className="btn-con">
-            <input type="button" value="Inquire" className="btn-inq"></input>
+              <Link to="/contacts">
+                <button type="submit" className="btn-inq">
+                  Inquire
+                </button>
+              </Link>
             </div>
           </div>
 
@@ -74,7 +96,11 @@ function Services() {
               making sure your website visitors are happy.
             </p>
             <div className="btn-con">
-            <input type="button" value="Inquire" className="btn-inq"></input>
+              <Link to="/contacts">
+                <button type="submit" className="btn-inq">
+                  Inquire
+                </button>
+              </Link>
             </div>
           </div>
         </div>

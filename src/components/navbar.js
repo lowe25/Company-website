@@ -10,7 +10,7 @@ function Navbar() {
           className={isMobile ? "nav-links-mobile" : "nav-links"}
           onClick={() => setIsMobile(false)}
         >
-          <NavLink to="/" className="nav-links1">
+          <NavLink to="/home" className="nav-links1">
             <li>Home</li>
           </NavLink>
           <NavLink to="/about" className="nav-links1">
@@ -20,6 +20,7 @@ function Navbar() {
           <NavLink to="/services" className="nav-links1">
             <li>Services</li>
           </NavLink>
+
           <NavLink to="/contacts" className="nav-links1">
             <li>Contacts</li>
           </NavLink>
