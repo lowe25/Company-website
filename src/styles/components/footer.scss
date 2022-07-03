@@ -44,6 +44,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+    i{
+      padding: 6px;
+    }
     .form {
       display: flex;
       gap: 10px;
@@ -54,6 +57,7 @@
       .btn-sign {
         height: 32px;
         width: 100px;
+        cursor: pointer;
       }
     }
   }
