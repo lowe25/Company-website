@@ -47,6 +47,10 @@
       .txt-contact {
       @include textbox1;
       }
+      .error{
+        color: red;
+        padding-bottom: 9px;
+      }
       .txt-area {
         @include text-area;
       }
