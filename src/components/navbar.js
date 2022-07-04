@@ -13,14 +13,14 @@ function Navbar() {
           <NavLink to="/" className="nav-links1">
             <li>Home</li>
           </NavLink>
-          <NavLink to="/about" className="nav-links1">
+          <NavLink activeStyle={{ color:'#5754a8' }} to="/about" className="nav-links1">
             <li>About</li>
           </NavLink>
 
-          <NavLink to="/services" className="nav-links1">
+          <NavLink activeStyle={{ color:'#5754a8' }} to="/services" className="nav-links1">
             <li>Services</li>
           </NavLink>
-          <NavLink to="/contacts" className="nav-links1">
+          <NavLink activeStyle={{ color:'#5754a8' }} to="/contacts" className="nav-links1">
             <li>Contacts</li>
           </NavLink>
         </ul>
