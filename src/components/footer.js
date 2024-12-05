@@ -44,7 +44,7 @@ function Footer() {
             <li className="footer__item">Services</li>
           </ul>
           <p>
-            <i className="fas fa-copyright"></i>2021 Parallax Web Services
+            <i className="fas fa-copyright"></i>2024 Parallax Web Services
           </p>
         </div>
       </div>
