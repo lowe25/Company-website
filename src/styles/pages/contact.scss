@@ -1,141 +1,95 @@
-.contacts-container {
+.contacts {
   min-height: 600px;
   padding: 20px;
   font-family: $font-quick;
 
-  .comp-loc {
+  &__loc {
     @include grid-center;
     text-align: center;
+  }
+
+  &__txt {
     line-height: 1.6;
-    p {
-      padding: 3px;
-    }
-    .comp-pic {
-      height: 200px;
-      width: 200px;
-      border: 1px solid black;
-      border-radius: 100px;
-      background: url("/images/compOffice.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-    }
-    ul {
-      list-style: none;
-      li {
-        padding: 5px;
-        text-align: left;
-        .fas {
-          padding: 10px;
-        }
-      }
+  }
+
+  &__pic {
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 100px;
+    background: url("/assets/images/compOffice.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    padding: 5px;
+    text-align: left;
+    .fas {
+      padding: 10px;
     }
   }
-  .form {
+
+  &__form-wrap {
     @include flex-center;
     gap: 30px;
-    .contact-form {
-      label {
-        display: block;
-        padding: 10px;
-        text-align: left;
-        position: relative;
-        right: 2%;
-      }
-      .txt-name,
-      .txt-email,
-      .txt-contact {
-      @include textbox1;
-      }
-      .error{
-        color: red;
-        padding-bottom: 9px;
-      }
-      .txt-area {
-        @include text-area;
-      }
-      .btn-submit {
-        @include btn-main;
-        color: $font-color1;
-        background-color: $bg-color1;
-      }
-    }
-    .contact-info {
-      padding: 2px;
-      ul {
-        list-style: none;
-        li {
-          padding: 5px;
-          .fas {
-            padding: 10px;
-          }
-        }
-      }
+  }
+
+  &__label {
+    display: block;
+    padding: 10px;
+    text-align: left;
+    position: relative;
+    right: 2%;
+  }
+
+  &__txtbox {
+    @include textbox1;
+  }
+
+  &__txtarea {
+    @include text-area;
+  }
+
+  &__btn-submit {
+    @include btn-main;
+    color: $white;
+    background-color: $bg-color1;
+  }
+
+  &__info {
+    padding: 2px;
+  }
+
+  &__list {
+    list-style: none;
+  }
+
+  &__list-item {
+    padding: 5px;
+    .fas {
+      padding: 10px;
     }
   }
 }
 
-@include mobile-device1(mobile-md) {
-.contacts-container{
-  .form {
-    @include flex-center;
-    flex-direction: column;
-    gap: 30px;
-    .contact-form {
-      .txt-name,
-      .txt-email,
-      .txt-contact {
-        width: 100%;
-      }
-      .txt-area {
-        width: 100%;
-      }
-      .btn-submit {
-        @include btn-main;
-        width: 100%;
-        color: $font-color1;
-        background-color: $bg-color1;
-      }
-    }
-    .contact-info{
-      @include grid-center;
-      ul{
-        li{
-          text-align: left;
-        }
-      }
-    }
-  }
-}
-}
-
-@include mobile-device-md(mobile-lg, tablet-sm){
-  .contacts-container {
-    .form {
+@include mobile(mobile) {
+  .contacts {
+    &__form-wrap {
+      @include flex-center;
       flex-direction: column;
-      .contact-form {
-        display: grid;
-        justify-content: center;
-        .txt-name,
-        .txt-email,
-        .txt-contact,
-        .txt-area,
-        .btn-submit  {
-          width: 400px;
-        }
-      }
-      .contact-info{
-        display: grid;
-        justify-content: center;
-        p{
-          text-align: center;
-        }
-        ul{
-          li{
-            text-align: left;
-          }
-        }
-      }
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    &__txtbox,
+    &__txtarea {
+      width: 100%;
     }
   }
 }

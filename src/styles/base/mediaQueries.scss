@@ -4,51 +4,58 @@ $screen-sizes: (
   "mobile-lg": 481px,
   "mobile-xx": 589px,
   "tablet-sm1": 590px,
+  "mobile": 767px,
   "tablet-sm": 768px,
   "tablet-md": 1024px,
-  "tablet-lg":1025px,
-  "screen-lg":1270px,
-  "screen-xl":1418px,
+  "tablet-lg": 1025px,
+  "screen-lg": 1270px,
+  "screen-xl": 1418px,
 );
- 
+
+@mixin mobile($screen) {
+  @media (max-width: map-get($screen-sizes, $screen)) {
+    @content;
+  }
+}
+
+@mixin max($screen) {
+  @media (max-width: $screen) {
+    @content;
+  }
+}
 
 @mixin mobile-device1($screen) {
-    @media(max-width: map-get($screen-sizes, $screen)){
-        @content;
-    }
+  @media (max-width: map-get($screen-sizes, $screen)) {
+    @content;
+  }
 }
 
 @mixin mobile-device-sm($screen1, $screen2) {
-    @media(min-width: map-get($screen-sizes, $screen1)) 
-    and (max-width: map-get($screen-sizes, $screen2)){
-        @content;
-    }
+  @media (min-width: map-get($screen-sizes, $screen1)) and (max-width: map-get($screen-sizes, $screen2)) {
+    @content;
+  }
 }
 
 @mixin mobile-device-md($screen1, $screen2) {
-    @media(min-width: map-get($screen-sizes, $screen1)) 
-    and (max-width: map-get($screen-sizes, $screen2)){
-        @content;
-    }
+  @media (min-width: map-get($screen-sizes, $screen1)) and (max-width: map-get($screen-sizes, $screen2)) {
+    @content;
+  }
 }
 
 @mixin tablet-device-sm($screen1, $screen2) {
-    @media(min-width: map-get($screen-sizes, $screen1)) 
-    and (max-width: map-get($screen-sizes, $screen2)){
-        @content;
-    }
+  @media (min-width: map-get($screen-sizes, $screen1)) and (max-width: map-get($screen-sizes, $screen2)) {
+    @content;
+  }
 }
 
 @mixin tablet-device-lg($screen1, $screen2) {
-    @media(min-width: map-get($screen-sizes, $screen1)) 
-    and (max-width: map-get($screen-sizes, $screen2)){
-        @content;
-    }
+  @media (min-width: map-get($screen-sizes, $screen1)) and (max-width: map-get($screen-sizes, $screen2)) {
+    @content;
+  }
 }
 
 @mixin screen-device-lg($screen1, $screen2) {
-    @media(min-width: map-get($screen-sizes, $screen1)) 
-    and (max-width: map-get($screen-sizes, $screen2)){
-        @content;
-    }
+  @media (min-width: map-get($screen-sizes, $screen1)) and (max-width: map-get($screen-sizes, $screen2)) {
+    @content;
+  }
 }

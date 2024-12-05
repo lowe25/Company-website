@@ -1,304 +1,100 @@
-.about-container {
+.about {
   font-family: $font-quick;
-  .comp-about {
+
+  &__container {
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &__comp {
     padding: 25px;
     h1 {
       text-align: center;
     }
-    .comp-desc {
-      text-align: center;
-      p {
-        display: inline-block;
-        width: 59%;
-        text-align: left;
-        margin-left: auto;
-        margin-right: auto;
-        line-height: 1.6;
-      }
-    }
   }
-}
 
-.comp-teams {
-  font-family: $font-quick;
-  min-height: 1200px;
-  color: black;
-  text-align: center;
-  h1{
+  &__desc {
+    text-align: center;
+    margin: 0 auto;
+    width: 59%;
+  }
+
+  &__desc-txt {
+    line-height: 1.6;
+  }
+
+  &__comp-teams {
+    font-family: $font-quick;
+    min-height: 1200px;
+    color: black;
     text-align: center;
   }
-.main{
+
+  &__main {
     display: grid;
     justify-content: center;
     padding: 20px;
-    .emp-131{
-        height: 200px;
-        width: 250px;
-        border: 1px solid black;
-        background: url("/images/ceo.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        p{
-          background-color: $bg-color1;
-          padding: 10px;
-          color: $font-color1;
-        }
-      }
-}
-  .teams {
- @include grid-col;
+  }
+
+  &__main-pos {
+    background-color: $bg-color1;
+    padding: 10px;
+    color: $white;
+  }
+
+  &__emp-img {
+    display: block;
+    width: 100%;
+    max-width: 353px;
+    height: 100%;
+    max-height: 200px;
+    object-fit: cover;
+
+    &--ceo {
+      width: 250px;
+      height: 200px;
+    }
+  }
+
+  &__teams {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 353px);
+    justify-content: center;
     gap: 70px;
     padding: 25px;
-    .emp-1 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/proj-manager1.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-  
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-2 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/proj-manager2.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-3 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/proj-manager3.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center 20px;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-4 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/front-end.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center 40px;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-5 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/front-end2.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center 40px;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-6 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/employee.png");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-7 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/back-end1.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center 1px;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-8 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/back-end2.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center 25px;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-9 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/back-end3.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center 1px;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-10 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/graphics-des.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center 12px;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-11 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/graphics-des2.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
-    .emp-12 {
-      height: 200px;
-      width: 250px;
-      border: 1px solid black;
-      background: url("/images/graphics-des3.jpg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      p{
-        background-color: $bg-color1;
-        padding: 10px;
-        color: $font-color1;
-      }
-    }
+  }
+
+  &__emp {
+    border: 1px solid #707070;
   }
 }
 
-/*Mobile Device Small*/
-@include mobile-device1(mobile-xx){
-  .about-container{
-    font-size: 15px;
-    .comp-about {
-      padding: 25px;
-      h1 {
-        text-align: center;
-        position: relative;
-        right: 0%;
-      }
-      .comp-desc {
-        text-align: center;
-        p {
-          display: inline-block;
-          width: 90%;
-          text-align: left;
-          margin-left: auto;
-          margin-right: auto;
-          line-height: 1.6;
-        }
-      }
+@include max(910px) {
+  .about {
+    &__desc {
+      width: initial;
     }
-  }
-  .comp-teams{
-    text-align: center;
-    h1{
-      text-align: center;
-      position: relative;
-      right: 0%;
-    }
-    .teams{
-     @include grid-col;
-     grid-template-columns: repeat(1,auto);
-    }
-  }
-}
 
-@include mobile-device-sm(tablet-sm1, tablet-sm){
-  .about-container{
-    font-size: 15px;
-    .comp-about {
-      padding: 25px;
-      h1 {
-        text-align: center;
-        position: relative;
-        right: 0%;
-      }
-      .comp-desc {
-        text-align: center;
-        p {
-          display: inline-block;
-          width: 90%;
-          text-align: left;
-          margin-left: auto;
-          margin-right: auto;
-          line-height: 1.6;
-        }
-      }
+    &__teams {
+      @include grid-col;
+      grid-template-columns: repeat(2, auto) !important;
+      gap: 30px;
     }
-  }
-  .comp-teams{
-    font-size: 15px;
-    h1{
-      text-align: center;
-      position: relative;
-      right: 0%;
-    }
-    .teams{
-     @include grid-col;
-     grid-template-columns: repeat(2,auto);
-    }
-  }
-}
 
-@include tablet-device-sm(tablet-sm, tablet-md){
-  .comp-teams{
-    .teams{
-     @include grid-col;
-     grid-template-columns: repeat(2,auto);
+    &__emp-img {
+      max-width: initial;
+      max-height: initial;
+      height: auto;
+    }
+
+    &__main-pos {
+      padding: 0;
+      font-size: 11px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
