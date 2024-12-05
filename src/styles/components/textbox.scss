@@ -1,9 +1,11 @@
 @mixin textbox1 {
-    height: 40px;
-    width: 450px;
+  height: 40px;
+  width: 450px;
+  padding: 0 10px;
 }
 
 @mixin text-area {
-    height: 150px;
-    width: 450px;
+  height: 150px;
+  width: 450px;
+  padding: 10px;
 }

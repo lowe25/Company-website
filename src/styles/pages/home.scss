@@ -1,178 +1,147 @@
-.landing-img {
-  height: 450px;
-  background: url("/images/landing-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  color: $font-color1;
-  font-family: $font-inter;
-  .landing-txt {
+.landing {
+  &__img {
+    height: 450px;
+    background: url("/assets/images/landing-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $white;
+    font-family: $font-inter;
+  }
+
+  &__txt {
     @include flex-col;
     text-align: center;
     position: relative;
     top: 30%;
-    h1 {
-      padding: 6px;
-    }
-    .btn-section {
-      @include grid-col;
-      grid-template-columns: repeat(2, auto);
-      gap: 10px;
-      .btn-packages,
-      .btn-consult {
-        @include btn-main;
-        color: $font-color1;
-        background-color: $bg-color4;
-      }
-    }
   }
-}
-.discounts-container {
-  height: 135px;
-  background-color: $bg-color2;
-  color: $font-color1;
-  font-family: $font-inter;
-  .inputs {
+
+  &__title {
+    padding: 6px;
+  }
+
+  &__btn-section {
+    margin-top: 20px;
+    @include grid-col;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+  }
+
+  &__btn-consult {
+    @include btn-main;
+    color: $white;
+    background-color: $bg-color4;
+  }
+
+  &__discounts-container {
+    height: 135px;
+    background-color: $bg-color2;
+    color: $white;
+    font-family: $font-inter;
+  }
+
+  &__inputs-blk {
     padding: 25px;
     position: relative;
     top: 18%;
     @include grid-col;
+    align-items: center;
     gap: 20px;
     font-size: 18px;
     text-align: center;
-    p {
-      position: relative;
-      top: 22%;
-    }
-    .txt-email {
-      @include textbox1;
-      width: 270px;
-    }
-    .btn-submit {
-      @include btn-main;
-      height: 40px;
-    }
-    .btn-submit:hover{
+  }
+
+  &__txt-email {
+    @include textbox1;
+    width: 270px;
+  }
+
+  &__btn-submit {
+    @include btn-main;
+    height: 40px;
+
+    &:hover {
       background-color: $bg-color3;
-      color: $font-color1;
+      color: $white;
       transition: 0.3s;
     }
   }
-}
-.tbl-container {
-font-family: $font-quick;
-  h1 {
+
+  &__tbl-container {
+    font-family: $font-quick;
+    min-height: 480px;
+    padding: 20px;
+  }
+
+  &__tbl-title {
     text-align: center;
     padding: 20px;
   }
-  min-height: 480px;
-  padding: 20px;
-  table {
-    border: 1px solid $font-color1;
+
+  &__tbl {
+    border: 1px solid $white;
     border-collapse: collapse;
     margin: 0;
     padding: 0;
     width: 100%;
     table-layout: fixed;
   }
-  
-  table caption {
-    font-size: 1.5em;
-    margin: .5em 0 .75em;
+
+  &__tbl-tr {
+    background-color: $white-f8;
+    border: 1px solid $bg-color1;
   }
-  
-  table tr {
-    background-color: #f8f8f8;
-    border: 1px solid black;
-  }
-  
-  table th,
-  table td {
-    padding:10px;
+
+  &__tbl-th,
+  &__tbl-td {
+    padding: 10px;
     text-align: center;
     color: $bg-color1;
   }
-  
-  table th {
-    font-size: .85em;
-    letter-spacing: .1em;
+
+  &__tbl-th {
+    font-size: 0.85em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
 }
-.client-container {
-  min-height: 400px;
-  text-align: center;
-  background-color: $bg-color3;
-  color: $font-color1;
-  .testimonial-grid {
-    @include grid-col;
-    gap: 70px;
-    .client1 {
-      .client-pic1 {
-        height: 160px;
-        width: 160px;
-        background-color: white;
-        border-radius: 200px;
-      }
+
+@include mobile(mobile) {
+  .landing {
+    &__txt {
+      font-size: 14px;
     }
 
-    .client2 {
-      .client-pic2 {
-        height: 160px;
-        width: 160px;
-        background-color: white;
-        border-radius: 200px;
-      }
-    }
-
-    .client3 {
-      .client-pic3 {
-        height: 160px;
-        width: 160px;
-        background-color: white;
-        border-radius: 200px;
-      }
-    }
-  }
-}
-
-/*Mobile Small*/
-@include mobile-device1(mobile-md) {
-  .landing-img {
-    font-size: 14px;
-    .landing-txt {
-      .btn-section {
-        grid-template-columns: repeat(1, auto);
-        justify-content: center;
-      }
-    }
-  }
-  .discounts-container {
-    height: 205px;
-    .inputs {
-      top: 0%;
+    &__btn-section {
       grid-template-columns: repeat(1, auto);
-      font-size: 15px;
-      .txt-email {
-        height: 40px;
-        width: 270px;
-      }
-      .btn-submit {
-        @include btn-main;
-        width: 270px;
-      }
+      justify-content: center;
     }
-  }
-  .tbl-container {
-    table {
+
+    &__discounts-container {
+      height: 205px;
+    }
+
+    &__inputs-blk {
+      top: 0%;
+      grid-template-columns: repeat(1, 1fr);
+      font-size: 15px;
+    }
+
+    &__txt-email {
+      height: 40px;
+      width: 100%;
+    }
+
+    &__btn-submit {
+      @include btn-main;
+      width: 100%;
+    }
+
+    &__tbl {
       border: 0;
     }
-  
-    table caption {
-      font-size: 1.3em;
-    }
-    
-    table thead {
+
+    &__tbl-thead {
       border: none;
       clip: rect(0 0 0 0);
       height: 1px;
@@ -182,70 +151,28 @@ font-family: $font-quick;
       position: absolute;
       width: 1px;
     }
-    
-    table tr {
-      border-bottom: 3px solid #ddd;
+
+    &__tbl-tr {
+      border-bottom: 3px solid $white-ddd;
       display: block;
-      margin-bottom: .625em;
+      margin-bottom: 0.625em;
     }
-    
-    table td {
-      border-bottom: 1px solid #ddd;
+
+    &__tbl-td {
+      border-bottom: 1px solid $white-ddd;
       display: block;
-      font-size: .8em;
+      font-size: 0.8em;
       text-align: right;
-    }
-    
-    table td::before {
-      /*
-      * aria-label has no advantage, it won't be read inside a table
-      content: attr(aria-label);
-      */
-      content: attr(data-label);
-      float: left;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    
-    table td:last-child {
-      border-bottom: 0;
-    }
-}
-}
-/*Mobile Medium*/
-@include mobile-device-sm(mobile-lg, tablet-sm) {
-  .discounts-container {
-    height: 205px;
-    .inputs {
-      top: 0%;
-      grid-template-columns: repeat(1, auto);
-      font-size: 15px;
-      .txt-email {
-        height: 40px;
-        width: 350px;
+
+      &::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
       }
-      .btn-submit {
-        @include btn-main;
-        width: 350px;
-      }
-    }
-  }
-}
-/*Tablet Small*/
-@include tablet-device-sm(tablet-sm, tablet-md) {
-  .discounts-container {
-    height: 205px;
-    .inputs {
-      top: 0%;
-      grid-template-columns: repeat(1, auto);
-      font-size: 15px;
-      .txt-email {
-        height: 40px;
-        width: 350px;
-      }
-      .btn-submit {
-        @include btn-main;
-        width: 350px;
+
+      &:last-child {
+        border-bottom: 0;
       }
     }
   }

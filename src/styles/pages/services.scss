@@ -1,93 +1,63 @@
-.services-container {
-  min-height: 800px;
-  text-align: center;
-  padding-top: 70px;
-  font-family: $font-quick;
-
-  h1 {
-    padding: 15px;
+.services {
+  &__container {
+    text-align: center;
+    padding: 100px 30px 100px;
+    font-family: $font-quick;
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
   }
-  .services {
-    @include grid-col;
+
+  &__col {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 381px);
+    justify-content: center;
     gap: 20px;
-    .services1 {
-      border: 2px solid black;
-      height: 250px;
-      width: 450px;
-      p {
-        text-align: center;
-        padding: 25px;
-        font-size: 15px;
-      }
-      .e {
-        text-align: center;
-        padding: 25px;
-        font-size: 15px;
-      }
-      .aa {
-        text-align: center;
-        padding: 20px;
-        font-size: 15px;
-      }
-      .btn-con {
-        .btn-inq {
-          @include btn-main;
-          color: $font-color1;
-          background-color: $bg-color1;
-        }
-      }
-    }
+  }
+
+  &__blk {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid $bg-color1;
+    padding: 20px;
+    width: 100%;
+    max-width: 450px;
+  }
+
+  &__txt {
+    margin: 20px 0 20px;
+    flex-grow: 1;
+  }
+
+  &__btn {
+    @include btn-main;
+    color: $white;
+    background-color: $bg-color1;
   }
 }
 
-@include mobile-device1(mobile-md){
-.services-container{
-    padding-top: 0;
-    padding-bottom: 20px;
-    .services{
-        font-size: 15px;
-        @include grid-col;
-        grid-template-columns: repeat(1,auto);
-        .services1{
-            height: 360px;
-            width: 250px;
-            h2{
-                padding-top: 10px;
-            }
-        }
-    }
-}
-}
-
-@include mobile-device-md(mobile-lg, tablet-sm){
-  .services-container{
-    padding: 14px;
-    .services{
+@include max(841px) {
+  .services {
+    &__col {
       @include grid-col;
-      grid-template-columns: repeat(1,auto);
+      grid-template-columns: repeat(auto-fill, 100%);
+    }
+
+    &__blk {
+      max-width: initial;
     }
   }
 }
 
-@include tablet-device-lg(tablet-sm, tablet-md){
-  .services-container{
-    padding: 14px;
-    .services{
-      @include grid-col;
-      grid-template-columns: repeat(1,auto);
+@include mobile(mobile) {
+  .services {
+    &__container {
+      padding-bottom: 20px;
+    }
+
+    &__col {
+      font-size: 15px;
     }
   }
 }
-
-@include screen-device-lg(tablet-lg, screen-xl){
-  .services-container{
-    padding: 14px;
-    .services{
-      @include grid-col;
-      grid-template-columns: repeat(2,auto);
-    }
-  }
-}
-
-
-

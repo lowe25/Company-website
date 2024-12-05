@@ -5,22 +5,36 @@ function Navbar() {
   return (
     <div>
       <nav className="navbar">
-        <h1 className="logo">Parallax Web Services</h1>
+        <h1 className="navbar__logo">Parallax Web Services</h1>
         <ul
-          className={isMobile ? "nav-links-mobile" : "nav-links"}
+          className={
+            isMobile ? "navbar__nav-links-mobile" : "navbar__nav-links"
+          }
           onClick={() => setIsMobile(false)}
         >
-          <NavLink to="/" className="nav-links1">
+          <NavLink to="/" className="navbar__nav-links1">
             <li>Home</li>
           </NavLink>
-          <NavLink activeStyle={{ color:'#5754a8' }} to="/about" className="nav-links1">
+          <NavLink
+            activeStyle={{ color: "#5754a8" }}
+            to="/about"
+            className="navbar__nav-links1"
+          >
             <li>About</li>
           </NavLink>
 
-          <NavLink activeStyle={{ color:'#5754a8' }} to="/services" className="nav-links1">
+          <NavLink
+            activeStyle={{ color: "#5754a8" }}
+            to="/services"
+            className="navbar__nav-links1"
+          >
             <li>Services</li>
           </NavLink>
-          <NavLink activeStyle={{ color:'#5754a8' }} to="/contacts" className="nav-links1">
+          <NavLink
+            activeStyle={{ color: "#5754a8" }}
+            to="/contacts"
+            className="navbar__nav-links1"
+          >
             <li>Contacts</li>
           </NavLink>
         </ul>
